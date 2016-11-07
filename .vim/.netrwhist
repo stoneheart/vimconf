@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/kz9892/anaconda/Navigator.app'
+let g:netrw_dirhist_2='/Users/kz9892/.anaconda'
+let g:netrw_dirhist_3='/Users/kz9892/Downloads/Map/App_Data'
+let g:netrw_dirhist_4='/Users/kz9892/.vim'
