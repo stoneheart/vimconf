@@ -2,10 +2,10 @@
 " Vim-Plug 
 " ---------------------------------- "
 " Autoload Vim-Plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs --insecure https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
+"if empty(glob('~/.vim/autoload/plug.vim'))
+"  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs --insecure https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"  autocmd VimEnter * PlugInstall | source $MYVIMRC
+"endif
 " Load plugins with Vim-Plug 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -98,17 +98,17 @@ let python_highlight_all=1
 syntax on
 
 " Python PEP8
-au BufNewFile,BufRead *.py
-  \ set tabstop=4 |
-  \ set softtabstop=4 |
-  \ set shiftwidth=4 |
-  \ set textwidth=79 |
-  \ set expandtab |
-  \ set autoindent |
-  \ set fileformat=unix
+au BufNewFile,BufRead *.py set tabstop=4
+au BufNewFile,BufRead *.py set softtabstop=4
+au BufNewFile,BufRead *.py set shiftwidth=4
+au BufNewFile,BufRead *.py set textwidth=79
+au BufNewFile,BufRead *.py set expandtab
+au BufNewFile,BufRead *.py set autoindent
+au BufNewFile,BufRead *.py set fileformat=unix
 
 " Folding based on indentation
 au FileType python set foldmethod=indent
+set foldlevelstart=99
 set foldnestmax=2
 nnoremap <space> za " Enable folding with the spacebar
 
@@ -117,10 +117,9 @@ highlight BadWhitespace ctermbg=red guibg=red
 au BufNewFile,BufRead *.py match BadWhitespace /\s\+$/
 
 " Tab for web
-au BufNewFile,BufRead *.js, *.html, *.css
-  \ set tabstop=2 |
-  \ set softtabstop=2 |
-  \ set shiftwidth=2
+au BufNewFile,BufRead *.js, *.html, *.css set tabstop=2
+au BufNewFile,BufRead *.js, *.html, *.css set softtabstop=2
+au BufNewFile,BufRead *.js, *.html, *.css set shiftwidth=2
 
 " Set the default file encoding to utf-8
 set encoding=utf-8
@@ -133,7 +132,6 @@ if has('gui_running')
   set background=dark
   colorscheme solarized
 else
-  set background=dark
   colorscheme zenburn
 endif
 
