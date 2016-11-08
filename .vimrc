@@ -22,8 +22,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 Plug 'jmcantrell/vim-virtualenv'
+"Plug 'davidhalter/jedi-vim'
 call plug#end()
 
+"let g:jedi#auto_initialization = 1
+"let g:jedi#auto_close_doc = 1
+"let g:jedi#popup_on_dot = 0
 " ---------------------------------- "
 " Configure NERDTree
 " ---------------------------------- "
